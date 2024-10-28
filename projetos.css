@@ -50,13 +50,11 @@
 }
 
 .projeto-ano {
-    position: absolute;
-    top: 22px;
-    left: -100px;
+
     color: #525252;
     font-size: 0.875rem;
     width: 80px;
-    text-align: right;
+    margin-bottom: 10px;
 }
 
 .projeto-titulo{
@@ -85,16 +83,28 @@
     gap: 10px;
     list-style: none;
     padding: 0;
+    margin-bottom: 5px;
 }
 
-.projeto-habilidades li, .projeto-links li a {
+.projeto-habilidades li {
     font-size: 0.875rem;
-    line-height: 1.4;
+    line-height: 1.7rem;
     border-radius: 4px;
     background: #f0f0f0;
-    padding: 8px;
+    padding: 8px;    
     text-align: center;
     color: #141414;
+    text-decoration: none;
+}
+
+.projeto-links li a {
+    font-size: 0.75rem;
+    line-height: 1.7rem;
+    border-radius: 4px;
+    background: #353535;
+    padding: 8px;    
+    text-align: center;
+    color: #eeeeee;
     text-decoration: none;
 }
 
@@ -119,14 +129,6 @@
 @media (max-width: 800px) {
     .projeto-item {
         grid-template-columns: 1fr;
-    }
-
-    .projeto-ano {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin-bottom: 10px;
-        text-align: right;
     }
 
     .projetos-skills .subtitulo {
