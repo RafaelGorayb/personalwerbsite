@@ -1,5 +1,5 @@
-# brunod3vs.github.io
+# rafael gorayb
 Projeto Pessoal
 
 Minha pagina About Me.
-acesse aqui: https://brunod3v.vercel.app
+acesse aqui: rafaelgorayb-workresume.vercel.app
