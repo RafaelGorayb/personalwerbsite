@@ -5,14 +5,14 @@
 }
 
 .projetos-skills .subtitulo {
-    font-size: 6rem;
+    font-size: 3rem;
     word-break: break-all;
     line-height: 1;
     text-transform: uppercase;
     max-width: 10ch;
-    
+    text-align: center;
+    margin-bottom: 20px;
 }
-
 
 .projetos-container, .skills-container {
     max-width: 1200px;
@@ -22,32 +22,81 @@
 
 .projetos-lista {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
     margin-top: 20px;
 }
 
 .projeto-item {
-    flex: 1 1 45%;
-    background: #f9f9f9; /* Cor de fundo semelhante à experiência */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
-    border-radius: 4px;
-    
+    background: white;
+    border-radius: 8px;
+    gap: 20px;
+    position: relative;
 }
 
-.projeto-titulo {
-    font-size: 1.25rem;
-    color: #141414; /* Cor do título ajustada */
-    margin-bottom: 10px;
+.projeto-item::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(#b6f829, #67dd0a);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.projeto-ano {
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    color: #525252;
+    font-size: 0.875rem;
+    width: 80px;
+    text-align: right;
+}
+
+.projeto-titulo{
+    font-size: 1.125rem ;
+    line-height: 1.1;
     font-weight: bold;
 }
 
-.projeto-descricao {
-    font-size: 1rem;
+.projeto-texto{
+    font-size: 0.875rem;
+    line-height: 1.4;
     color: #525252;
-    line-height: 1.6;
+
 }
 
+.detalhes-titulo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #141414;
+}
+
+.projeto-habilidades, .projeto-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.projeto-habilidades li, .projeto-links li a {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    border-radius: 4px;
+    background: #f0f0f0;
+    padding: 8px;
+    text-align: center;
+    color: #141414;
+    text-decoration: none;
+}
 
 .skills-lista {
     list-style: none;
@@ -59,7 +108,7 @@
 }
 
 .skills-lista li {
-    background: #000;
+    background: #1b1b1b;
     color: white;
     padding: 10px 15px;
     border-radius: 4px;
@@ -68,12 +117,20 @@
 }
 
 @media (max-width: 800px) {
-    .skills-lista {
+    .projeto-item {
         grid-template-columns: 1fr;
     }
 
-    .projetos-skills .subtitulo{
-        font-size: 3rem;
+    .projeto-ano {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    .projetos-skills .subtitulo {
+        font-size: 2rem;
         text-transform: uppercase;
         max-width: initial !important;
     }
